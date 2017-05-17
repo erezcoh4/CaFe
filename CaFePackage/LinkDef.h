@@ -10,5 +10,7 @@
 #pragma link off all functions;
 
 #pragma link C++ class sample+;
+#pragma link C++ class SRCmodels+;
 //ADD_NEW_CLASS ... do not change this line
 #endif
+
