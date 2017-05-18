@@ -15,6 +15,10 @@
 #define SRCMODELS_H
 
 #include <iostream>
+#include "myIncludes.h"
+#include "TCalculations.h"
+#include "nucleon.h"
+#include "nucleus.h"
 
 /**
    \class SRCmodels
@@ -25,12 +29,24 @@ class SRCmodels{
 
 public:
 
-  /// Default constructor
-  SRCmodels(){}
-
-  /// Default destructor
+    SRCmodels();
   ~SRCmodels(){}
 
+    TF1 *   CFGMomentumDist ();
+    Float_t      MFnucleons ();
+    Float_t              Tp ();
+    Float_t          MeanTp ();
+    Float_t     p_SRCk4Tail ();
+    Float_t     p_MeanField ();
+    
+    
+    
+    void SetKFermi (Float_t  fkF = 250){kF = fkF;};
+
+    Float_t  kF;
+    
+    TF1 * SRCk4Tail;
+    
 };
 
 #endif
